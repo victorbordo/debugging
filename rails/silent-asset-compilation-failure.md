@@ -65,7 +65,7 @@ Running `RAILS_ENV=production bundle exec rails webpacker:compile` to reproduce 
     Compiling…
     Compilation failed:
 
-Same problem when we append `--trace` for better visibility:
+Same problem when appending `--trace` for better visibility:
 
     RAILS_ENV=production bundle exec rake assets:precompile --trace
 
@@ -124,7 +124,7 @@ Using the webpack binary produces verbose logs with errors:
 Webpacker can't find the `tailwindcss` module during asset pre-compilation.
 
 ## Cause
-TailwindCSS was improperly configured. `package.json` did not contain tailwind as a dependency. It was only listed in devDependencies. This explains why the error wasn't being throw while developing locally.
+TailwindCSS was improperly configured. `package.json` did not contain tailwind as a dependency. It was only listed in `devDependencies`. This explains why the error wasn't being throw while developing locally.
 
     # package.json
 
